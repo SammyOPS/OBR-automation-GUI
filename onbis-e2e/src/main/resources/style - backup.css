@@ -1,0 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+
+table {
+    margin-left: 10%;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    border-collapse: collapse;
+    empty-cells: show;
+}
+
+th, td {
+    border: 0;
+    padding: .25em .5em;
+    font-weight: lighter;
+}
+
+/* Style the first rows of the table */
+table:first-of-type tr:first-of-type,
+table#summary thead tr:first-of-type,
+table.result tbody tr:first-of-type {
+    background-color: #666;
+    color: white;
+    font-weight: lighter;
+    height: 4em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/* Hide "MoL Tests" row */
+table:first-of-type tr:nth-child(2),
+table#summary tbody:first-of-type tr{
+    display: none;
+}
+
+table#summary tbody th {
+    padding-top:32px;
+    text-align: left;
+    font-weight: bold;
+}
+
+table:first-of-type tr:last-of-type {
+    border-top: 2px solid #979797;
+    background-color: #E6E6E6;
+}
+
+td {
+    vertical-align: top;
+}
+
+.stripe td {
+    background-color: #EFEFEF;
+}
+
+.num {
+    text-align: right;
+}
+
+.passedodd td {
+    background-color: #B1E8B7;
+}
+
+.passedeven td {
+    background-color: #D0FFC2;
+}
+
+.skippedodd td {
+    background-color: #DDD;
+}
+
+.skippedeven td {
+    background-color: #CCC;
+}
+
+.failedodd td {
+    background-color: #E88DA5;
+}
+
+.failedeven td, .stripe {
+    background-color: #FFADA7;
+}
+
+h2, h3 {
+    margin-left: 10%;
+    font-weight: normal;
+}
+
+table.result th {
+    text-align: left;
+}
+
+table.result {
+    margin-left: 10%;
+    margin-bottom: 32px;
+}
+
+.stacktrace {
+    overflow: auto;
+    width: 1024px;
+    white-space: pre;
+    font-family: "Courier New";
+}
+
+/* back to summary */
+.totop {
+    font-size: 85%;
+    text-align: center;
+    border-bottom: 0.625rem solid #979797;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1rem;
+}
+
+#header {
+    background-color: #333;
+    padding: 8px 8px 8px 64px;
+    color: white;
+}
+#header span#logo {
+    padding-left:32px;
+    font-size: 1.45em;
+    color: #eee;
+}

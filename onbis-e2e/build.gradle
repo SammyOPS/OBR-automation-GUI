@@ -1,0 +1,97 @@
+plugins {
+    id 'java'
+    id "io.qameta.allure" version "2.8.1"
+}
+
+group 'appmybizaccount.gov.on.ca'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    compile 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.8.0'
+    compile 'org.testng:testng:6.14.3'
+    compile 'junit:junit:4.12'
+    compile 'commons-io:commons-io:2.4'
+    compile 'org.apache.httpcomponents:fluent-hc:4.5.3'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.3'
+    compile 'com.github.lafa.jsonpath:json-path:2.4.0'
+    compile group: 'com.deque', name: 'axe-selenium', version: '3.0'
+    compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
+    compile 'com.codeborne:selenide:5.3.1'
+//    implementation group: 'com.sun.mail', name: 'javax.mail', version: '1.6.1'
+    implementation group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
+//    compile group: 'com.sun.mail', name: 'smtp', version: '1.6.1'
+    compile group: 'com.mashape.unirest', name: 'unirest-java', version: '1.3.1'
+    runtime group: 'org.jtwig', name: 'jtwig-core', version: '5.87.0.RELEASE'
+    compile 'com.google.code.gson:gson:2.8.5'
+    testCompile group: 'com.jayway.restassured', name: 'rest-assured', version: '1.6'
+    implementation group: 'log4j', name: 'log4j', version: '1.2.17'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.13.3'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.14.1'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.3'
+    implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.13.8'
+//    implementation group: 'javax.mail', name: 'mail', version: '1.6.2'
+    implementation group: 'org.jsoup', name: 'jsoup', version: '1.13.1'
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.3.3'
+    testImplementation 'junit:junit:4.12'
+    compile 'com.google.api-client:google-api-client:1.23.0'
+    compile 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+    compile 'com.google.apis:google-api-services-gmail:v1-rev83-1.23.0'
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.4.0'
+//    compile 'com.google.api-client:google-api-client:1.23.0'
+//    compile 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+//    compile 'com.google.apis:google-api-services-gmail:v1-rev83-1.23.0'
+    implementation group: 'javax.mail', name: 'javax.mail-api', version: '1.6.2'
+    implementation group: 'org.apache.commons', name: 'commons-email', version: '1.5'
+    implementation group: 'io.rest-assured', name: 'rest-assured-common', version: '4.4.0'
+    implementation group: 'org.apache.pdfbox', name: 'pdfbox', version: '2.0.1'
+// https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    // Add JavaMail dependency
+    implementation 'com.sun.mail:javax.mail:1.6.2'
+
+    // Add Jsoup dependency for HTML parsing
+    implementation 'org.jsoup:jsoup:1.14.3'
+
+// https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot
+    implementation group: 'ru.yandex.qatools.ashot', name: 'ashot', version: '1.5.4'
+    testCompile(rootProject) {
+        exclude group: '*'
+    }
+}
+
+test {
+    useTestNG() {
+        //DoNotRemove
+        suites 'src/test/java/com/onbis/Helper/testng.xml'
+//        suites 'src/test/java/com/onbis/Helper/testngdebug.xml'
+        useDefaultListeners = true
+        //outputDirectory = file("$projectDir/report")
+    }
+
+    reports.html.setDestination(file("$projectDir/GradleReport"))
+    afterTest { desc, result ->
+        logger.quiet "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
+    }
+}
+group 'onbis-e2e'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'javax.mail', name: 'javax.mail-api', version: '1.6.2'  // https://web.archive.org/web/20190624100733/https://mvnrepository.com/artifact/javax.mail/javax.mail-api/1.6.2
+
+}

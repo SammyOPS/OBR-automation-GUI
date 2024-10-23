@@ -1,0 +1,6 @@
+WinActivate("Windows Security")
+Send ("onbissupporttest@ontario.ca")
+Send("{TAB}")
+Send("6pNEAwyd9F+a")
+Send("{TAB}")
+Send("{ENTER}")

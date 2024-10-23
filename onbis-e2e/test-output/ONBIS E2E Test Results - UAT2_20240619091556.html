@@ -1,0 +1,926 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>ONBIS E2E Test Results</title><style type="text/css">@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+
+table {
+    margin-left: 10%;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    border-collapse: collapse;
+    empty-cells: show;
+}
+
+th, td {
+    border: 1px solid #009;
+    padding: .25em .5em;
+    font-weight: normal;
+}
+
+/* Style the first rows of the table */
+table:first-of-type tr:first-of-type,
+table#summary thead tr:first-of-type,
+table.result tbody tr:first-of-type {
+    background-color: #b2817b; / * #666; */
+    color: white;
+    font-weight: lighter;
+    height: 4em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/* Hide "MoL Tests" row */
+table:first-of-type tr:nth-child(2),
+table#summary tbody:first-of-type tr{
+    display: none;
+}
+
+table#summary tbody th {
+    padding-top:32px;
+    text-align: left;
+    font-weight: bold;
+}
+
+table:first-of-type tr:last-of-type {
+    border-top: 2px solid #979797;
+    background-color: #E6E6E6;
+}
+
+td {
+    vertical-align: top;
+}
+
+.stripe td {
+    background-color: #EFEFEF;
+}
+
+.num {
+    text-align: right;
+}
+
+.passedodd td {
+    background-color: #3F3;
+}
+
+.passedeven td {
+    background-color: #0A0;
+}
+
+.skippedodd td {
+    background-color: #DDD;
+}
+
+.skippedeven td {
+    background-color: #CCC;
+}
+
+.failedodd td {
+    background-color: #F33;
+}
+
+.failedeven td, .stripe {
+    background-color: #D00;
+}
+
+h2, h3 {
+    margin-left: 10%;
+    font-weight: normal;
+}
+
+table.result th {
+    text-align: left;
+}
+
+table.result {
+    margin-left: 10%;
+    margin-bottom: 32px;
+}
+
+.stacktrace {
+    overflow: auto;
+    width: 1024px;
+    white-space: pre;
+    font-family: "Courier New";
+}
+
+/* back to summary */
+.totop {
+    font-size: 85%;
+    text-align: center;
+    border-bottom: 0.625rem solid #7bb29c;       /* 979797; */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1rem;
+}
+
+#header {
+    background-color: #333;
+    padding: 8px 8px 8px 64px;
+    color: white;
+}
+#header span#logo {
+    padding-left:32px;
+    font-size: 1.45em;
+    color: #eee;
+}</style></head><body><div id='header'><img src='images/logo.png' width='128px'><span id='logo'><b>ONBIS E2E Test Results</b></span></div><div id='header'> Reporting Date & Time           : 19-Jun-2024 10:23:AM</span></div><div id='header'> Test Execution Host Name &  IP  : ON34C03174383/10.61.66.182</span></div><div id='header'> Test Execution OS Name: Windows 10</span></div><div id='header'> Test Execution Java Version     : 1.8.0_281</span></div><div id='header'> Test Execution User Name        : MustofG</span></div><div id='header'> Test Execution Environment      : UAT2</span></div><table><tr><th><b><ins>Test Suite<b></ins></th><th><font color="green"><b><ins>Passed</font color><b></ins></th><th><font color="yellow"><b><ins>Skipped</font color><b></ins></th><th><font color="red"><b><ins>Failed</font color><b></ins></th><th><font color="blue"><b><ins>D:HH:MM:SS</font color><b></ins></th><th><b><ins>Included Groups<b></ins></th><th><b><ins>Excluded Groups<b></ins></th></tr><tr><th colspan="7">Onbis E2E Tests</th></tr><tr><td><a href="#t0">Onbis-Sanity-PartnerPortal-Chrome</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0:00:00:00</td><td></td><td></td></tr><tr class="stripe"><td><a href="#t1">Onbis-Sanity-SOAB Portal-Chrome - SOAB Account Incorporate Tests </a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0:00:00:00</td><td></td><td></td></tr><tr><td><a href="#t2">Onbis-Sanity-SOAdmin-Chrome</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0:00:00:00</td><td></td><td></td></tr><tr class="stripe"><td><a href="#t3">Onbis-Regression-Partner Portal</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0:00:05:34</td><td></td><td></td></tr><tr><td><a href="#t4">Onbis-Regression-Admin Portal</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">7</td><td class="num">0:00:31:27</td><td></td><td></td></tr><tr class="stripe"><td><a href="#t5">Onbis-Regression-SOAB Portal</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">0:00:00:39</td><td></td><td></td></tr><tr><td><a href="#t6">Onbis-Regression-Partner Portal-Data Creation for Renewal</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0:00:00:00</td><td></td><td></td></tr><tr class="stripe"><td><a href="#t7">Onbis-Regression-Partner Portal- Renewal</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0:00:00:00</td><td></td><td></td></tr><tr><td><a href="#t8">Onbis-CR Regression Test - November 2022 Release</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">8</td><td class="num">0:00:27:53</td><td></td><td></td></tr><tr class="stripe"><td><a href="#t9">Onbis-CR Regression Test - February 2023 Release</a></td><td class="num">0</td><td class="num attn">1</td><td class="num attn">1</td><td class="num">0:00:02:27</td><td></td><td></td></tr><tr><th><b>Total :-------><b></th><th class="num">3</th><th class="num attn">1</th><th class="num attn">17</th><th class="num">0:01:08:02</th><th colspan="2"></th></tr></table><table><thead><tr><th><b><ins>Class Name<b></ins></th><th><b><ins>Method Name<b></ins></th><th><b><ins>Test Name<b></ins></th><th><b><ins>Test Starts<b></ins></th><th><font color="blue"><b><ins>D:HH:MM:SS</font color><b></ins></th></tr></thead><tbody><tr><th colspan="5">Onbis E2E Tests</th></tr></tbody><tbody id="t0"></tbody><tbody id="t1"></tbody><tbody id="t2"></tbody><tbody id="t3"><tr><th colspan="5">Onbis-Regression-Partner Portal &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.onbis.TestCases.BNM010_AmendABusinessNameRegistrationForACorporation</td><td><a href="#m0">BNM010_AmendABusinessNameRegistrationForACorporation</a></td><td rowspan="1">BNM010_AmendABusinessNameRegistrationForACorporation</td><td rowspan="1">09:16:03 AM</td><td rowspan="1">0:00:05:26</td></tr></tbody><tbody id="t4"><tr><th colspan="5">Onbis-Regression-Admin Portal &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.onbis.TestCases.REG_BCAM008_FileFinalPlanForArrangement</td><td><a href="#m1">REG_BCAM008_FileFinalPlanForArrangement</a></td><td rowspan="1">REG_BCAM008_FileFinalPlanForArrangement</td><td rowspan="1">09:23:06 AM</td><td rowspan="1">0:00:04:00</td></tr><tr class="failedodd"><td rowspan="1">com.onbis.TestCases.REG_BCAM012_ReviveAnOntarioBusinessCorporation</td><td><a href="#m2">REG_BCAM012_ReviveAnOntarioBusinessCorporation</a></td><td rowspan="1">REG_BCAM012_ReviveAnOntarioBusinessCorporation</td><td rowspan="1">09:27:21 AM</td><td rowspan="1">0:00:02:48</td></tr><tr class="failedeven"><td rowspan="1">com.onbis.TestCases.REG_EPCM007_ApplicationForAmendmentToLicenceForAForeignCorporation</td><td><a href="#m3">REG_EPCM007_ApplicationForAmendmentToLicenceForAForeignCorporation</a></td><td rowspan="1">REG_EPCM007_ApplicationForAmendmentToLicenceForAForeignCorporation</td><td rowspan="1">09:31:24 AM</td><td rowspan="1">0:00:05:22</td></tr><tr class="failedodd"><td rowspan="1">com.onbis.TestCases.REG_LLCM003_CancelARegistrationExtraProvincialLimitedLiabilityCompanyName</td><td><a href="#m4">REG_LLCM003_CancelARegistrationExtraProvincialLimitedLiabilityCompanyName</a></td><td rowspan="1">REG_LLCM003_CancelARegistrationExtraProvincialLimitedLiabilityCompanyName</td><td rowspan="1">09:37:09 AM</td><td rowspan="1">0:00:01:57</td></tr><tr class="failedeven"><td rowspan="1">com.onbis.TestCases.REG_NFPCM007_NFPCA_FileDraftPlanOfArrangement</td><td><a href="#m5">REG_NFPCM007_NFPCA_FileDraftPlanOfArrangement</a></td><td rowspan="1">REG_NFPCM007_NFPCA_FileDraftPlanOfArrangement</td><td rowspan="1">09:43:44 AM</td><td rowspan="1">0:00:01:43</td></tr><tr class="failedodd"><td rowspan="1">com.onbis.TestCases.REG_NFPCM008_NFPCA_FileFinalPlanOfArrangement</td><td><a href="#m6">REG_NFPCM008_NFPCA_FileFinalPlanOfArrangement</a></td><td rowspan="1">REG_NFPCM008_NFPCA_FileFinalPlanOfArrangement</td><td rowspan="1">09:45:56 AM</td><td rowspan="1">0:00:06:53</td></tr><tr class="failedeven"><td rowspan="1">com.onbis.TestCases.REG_NFPCM011_NFPCA_ReviveNotForProfitCorporation</td><td><a href="#m7">REG_NFPCM011_NFPCA_ReviveNotForProfitCorporation</a></td><td rowspan="1">REG_NFPCM011_NFPCA_ReviveNotForProfitCorporation</td><td rowspan="1">09:40:35 AM</td><td rowspan="1">0:00:01:45</td></tr></tbody><tbody id="t5"><tr><th colspan="5">Onbis-Regression-SOAB Portal &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.onbis.TestCases.BCAM010_TestCasesFileArticlesDissolveOntarioBusinessCorporation</td><td><a href="#m8">BCAM010_TestCasesFileArticlesDissolveOntarioBusinessCorporation</a></td><td rowspan="1">BCAM010_TestCasesFileArticlesDissolveOntarioBusinessCorporation</td><td rowspan="1">09:53:00 AM</td><td rowspan="1">0:00:00:32</td></tr></tbody><tbody id="t6"></tbody><tbody id="t7"></tbody><tbody id="t8"><tr><th colspan="5">Onbis-CR Regression Test - November 2022 Release &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.onbis.TestCases.CR_4258_EPForeignWithShare_EntityNameJurisdictionNonEditable_TC2</td><td><a href="#m9">CR_4258_EPForeignWithShare_EntityNameJurisdictionNonEditable_TC2</a></td><td rowspan="1">CR_4258_EPForeignWithShare_EntityNameJurisdictionNonEditable_TC2</td><td rowspan="1">10:07:47 AM</td><td rowspan="1">0:00:01:42</td></tr><tr class="failedodd"><td rowspan="1">com.onbis.TestCases.CR_4260_4279_4277_4574_4592_4628_CondoCorporationsAssignAnOCN_TC1</td><td><a href="#m10">CR_4260_4279_4277_4574_4592_4628_CondoCorporationsAssignAnOCN_TC1</a></td><td rowspan="1">CR_4260_4279_4277_4574_4592_4628_CondoCorporationsAssignAnOCN_TC1</td><td rowspan="1">10:00:38 AM</td><td rowspan="1">0:00:01:47</td></tr><tr class="failedeven"><td rowspan="1">com.onbis.TestCases.CR_4260_4279_4277_4574_4592_4628_GeneralPartnershipInternationalAddress_TC3_TC4_TC5</td><td><a href="#m11">CR_4260_4279_4277_4574_4592_4628_GeneralPartnershipInternationalAddress_TC3_TC4_TC5</a></td><td rowspan="1">CR_4260_4279_4277_4574_4592_4628_GeneralPartnershipInternationalAddress_TC3_TC4_TC5</td><td rowspan="1">09:57:39 AM</td><td rowspan="1">0:00:02:46</td></tr><tr class="failedodd"><td rowspan="2">com.onbis.TestCases.CR_4260_4279_4277_4574_4592_4628_SoleProp_TC1_3</td><td><a href="#m12">CR_4260_4279_4277_4574_4592_4628_SoleProp_TC1</a></td><td rowspan="1">CR_4260_4279_4277_4574_4592_4628_SoleProp_TC1</td><td rowspan="1">09:53:46 AM</td><td rowspan="1">0:00:01:41</td></tr><tr class="failedodd"><td><a href="#m13">CR_4260_4279_4277_4574_4592_4628_SoleProp_TC2_TC3</a></td><td rowspan="1">CR_4260_4279_4277_4574_4592_4628_SoleProp_TC2_TC3</td><td rowspan="1">09:55:44 AM</td><td rowspan="1">0:00:01:44</td></tr><tr class="failedeven"><td rowspan="1">com.onbis.TestCases.CR_4280_OntarioBusinessIncorporation_RequestCertificate_CourtOrderedWindingUp_TC1</td><td><a href="#m14">CR_4280_OntarioBusinessIncorporation_RequestCertificate_CourtOrderedWindingUp_TC1</a></td><td rowspan="1">CR_4280_OntarioBusinessIncorporation_RequestCertificate_CourtOrderedWindingUp_TC1</td><td rowspan="1">10:09:45 AM</td><td rowspan="1">0:00:01:43</td></tr><tr class="failedodd"><td rowspan="1">com.onbis.TestCases.CR_4348_RegisterExtraProvincialLimitedLiabilityCompany_AddressOfGeneralManager_TC1</td><td><a href="#m15">CR_4348_RegisterExtraProvincialLimitedLiabilityCompany_AddressOfGeneralManager_TC1</a></td><td rowspan="1">CR_4348_RegisterExtraProvincialLimitedLiabilityCompany_AddressOfGeneralManager_TC1</td><td rowspan="1">10:02:45 AM</td><td rowspan="1">0:00:00:26</td></tr><tr class="failedeven"><td rowspan="1">com.onbis.TestCases.CR_4437_EPFCWithShare_FileArticlesOfContinuanceUnderBCA_RequestedPastDateForContinuance_TC1</td><td><a href="#m16">CR_4437_EPFCWithShare_FileArticlesOfContinuanceUnderBCA_RequestedPastDateForContinuance_TC1</a></td><td rowspan="1">CR_4437_EPFCWithShare_FileArticlesOfContinuanceUnderBCA_RequestedPastDateForContinuance_TC1</td><td rowspan="1">10:19:40 AM</td><td rowspan="1">0:00:01:42</td></tr><tr><th colspan="5">Onbis-CR Regression Test - November 2022 Release &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.onbis.TestCases.CR_4254_AnnualReturnOption_ExtraProvincialLicenceForAForeignCorporation_TC3</td><td><a href="#m17">CR_4254_AnnualReturnOption_ExtraProvincialLicenceForAForeignCorporation_TC3</a></td><td rowspan="1">CR_4254_AnnualReturnOption_ExtraProvincialLicenceForAForeignCorporation_TC3</td><td rowspan="1">10:03:29 AM</td><td rowspan="1">0:00:03:59</td></tr><tr class="passedodd"><td rowspan="1">com.onbis.TestCases.CR_4349_ExtraProvincialLicence_CorporationdAsAgentFor_TC1_TC2</td><td><a href="#m18">CR_4349_ExtraProvincialLicence_CorporationdAsAgentFor_TC1_TC2</a></td><td rowspan="1">CR_4349_ExtraProvincialLicence_CorporationdAsAgentFor_TC1_TC2</td><td rowspan="1">10:11:45 AM</td><td rowspan="1">0:00:06:37</td></tr></tbody><tbody id="t9"><tr><th colspan="5">Onbis-CR Regression Test - February 2023 Release &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.onbis.TestCases.CR_4796_ActiveOntarioCorporationWithBusinessNam_FileArticlesOfContinuance</td><td><a href="#m19">setUp</a></td><td rowspan="1">setUp</td><td rowspan="1">10:23:34 AM</td><td rowspan="1">0:00:00:03</td></tr><tr><th colspan="5">Onbis-CR Regression Test - February 2023 Release &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.onbis.TestCases.CR_4751_ActiveNFPCA_WithActiveBusinessName_FileArticlesOfDissolution</td><td><a href="#m20">CR_4751_ActiveNFPCA_WithActiveBusinessName_FileArticlesOfDissolution</a></td><td rowspan="1">CR_4751_ActiveNFPCA_WithActiveBusinessName_FileArticlesOfDissolution</td><td rowspan="1">10:21:42 AM</td><td rowspan="1">0:00:01:43</td></tr><tr><th colspan="5">Onbis-CR Regression Test - February 2023 Release &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.onbis.TestCases.CR_4796_ActiveOntarioCorporationWithBusinessNam_FileArticlesOfContinuance</td><td><a href="#m21">CR_4796_ActiveOntarioCorporationWithBusinessNam_FileArticlesOfContinuance</a></td><td rowspan="1">CR_4796_ActiveOntarioCorporationWithBusinessNam_FileArticlesOfContinuance</td><td rowspan="1">10:23:38 AM</td><td rowspan="1">0:00:00:00</td></tr></tbody></table><h2>Onbis-Sanity-PartnerPortal-Chrome</h2><h2>Onbis-Sanity-SOAB Portal-Chrome - SOAB Account Incorporate Tests </h2><h2>Onbis-Sanity-SOAdmin-Chrome</h2><h2>Onbis-Regression-Partner Portal</h2><h3 id="m0">com.onbis.TestCases.BNM010_AmendABusinessNameRegistrationForACorporation#BNM010_AmendABusinessNameRegistrationForACorporation ( BNM010_AmendABusinessNameRegistrationForACorporation )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">PartnerPortal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32<br/>Business name and number is: 7HWOV236VDLJZBXXB1768 TEST INC. (1000618688)<br/>Updated Business corporation name is: IULRPUMZECDTUMER2<br/>Business name and number is: IULRPUMZECDTUMER2 (1000618689)</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h2>Onbis-Regression-Admin Portal</h2><h3 id="m1">com.onbis.TestCases.REG_BCAM008_FileFinalPlanForArrangement#REG_BCAM008_FileFinalPlanForArrangement ( REG_BCAM008_FileFinalPlanForArrangement )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">-------: REG_BCAM008_FileFinalPlanForArrangement -&gt; <br/>Admin Portal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32<br/>Ontario Corporation Name is: Incorporate an Ontario Business Corporation 1000618690 ONTARIO CORP. (1000618690)<br/>Search Result for: 10006186901000618690 ONTARIO CORP. (1000618690)</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[6]/div[2]/div[2]/div/div/div[1]/div/div/div/div[3]/div[2]/div/div/div[1]/div[2]/div/button&quot;}
+  (Session info: chrome=124.0.6367.92)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\MustofG\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62069}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 961f3f32f2187d45de0570466fd98a48
+*** Element info: {Using=xpath, value=/html/body/div[6]/div[2]/div[2]/div/div/div[1]/div/div/div/div[3]/div[2]/div/div/div[1]/div[2]/div/button}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.onbis.Pages.SOIncorporateOntarioBusinessCorporationPage.completeContactInformationFileArticlesOfContinuanceSave(SOIncorporateOntarioBusinessCorporationPage.java:1851)
+	at com.onbis.TestCases.REG_BCAM008_FileFinalPlanForArrangement.REG_BCAM008_FileFinalPlanForArrangement(REG_BCAM008_FileFinalPlanForArrangement.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m2">com.onbis.TestCases.REG_BCAM012_ReviveAnOntarioBusinessCorporation#REG_BCAM012_ReviveAnOntarioBusinessCorporation ( REG_BCAM012_ReviveAnOntarioBusinessCorporation )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">-------: REG_BCAM012_ReviveAnOntarioBusinessCorporation -&gt; <br/>Admin Portal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32<br/>Ontario Corporation Name is: Incorporate an Ontario Business Corporation 1000618691 ONTARIO CORP. (1000618691)<br/>Search Result for: 10006186911000618691 ONTARIO CORP. (1000618691)</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(@class,&apos;appDocumentUpload-&apos;)]&quot;}
+  (Session info: chrome=124.0.6367.92)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\MustofG\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62191}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7b8cfd45ed220036917690fb84f54246
+*** Element info: {Using=xpath, value=//button[contains(@class,&apos;appDocumentUpload-&apos;)]}
+	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.onbis.Pages.PartnerSoleProprietorshipRegistrationPage.ontarioBusinessIncorporationUpdateSubStatusCancelledByCB(PartnerSoleProprietorshipRegistrationPage.java:2821)
+	at com.onbis.TestCases.REG_BCAM012_ReviveAnOntarioBusinessCorporation.REG_BCAM012_ReviveAnOntarioBusinessCorporation(REG_BCAM012_ReviveAnOntarioBusinessCorporation.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m3">com.onbis.TestCases.REG_EPCM007_ApplicationForAmendmentToLicenceForAForeignCorporation#REG_EPCM007_ApplicationForAmendmentToLicenceForAForeignCorporation ( REG_EPCM007_ApplicationForAmendmentToLicenceForAForeignCorporation )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">-------: REG_EPCM007_ApplicationForAmendmentToLicenceForAForeignCorporation -&gt; <br/>Admin Portal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32<br/>-------: &apos;Generate PDF&apos; -  is enabled to click. &apos; :-------</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//button[contains(@class,&apos;LOCAL&apos;)])&quot;}
+  (Session info: chrome=124.0.6367.92)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\MustofG\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62257}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 63806c168ab2eaad7b51ed95106a93dc
+*** Element info: {Using=xpath, value=(//button[contains(@class,&apos;LOCAL&apos;)])}
+	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.onbis.Pages.SOIncorporateOntarioBusinessCorporationPage.completeContactInformationfileApplicationForAmendedExtraProvincialLicenceAndSave(SOIncorporateOntarioBusinessCorporationPage.java:1091)
+	at com.onbis.TestCases.REG_EPCM007_ApplicationForAmendmentToLicenceForAForeignCorporation.REG_EPCM007_ApplicationForAmendmentToLicenceForAForeignCorporation(REG_EPCM007_ApplicationForAmendmentToLicenceForAForeignCorporation.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m4">com.onbis.TestCases.REG_LLCM003_CancelARegistrationExtraProvincialLimitedLiabilityCompanyName#REG_LLCM003_CancelARegistrationExtraProvincialLimitedLiabilityCompanyName ( REG_LLCM003_CancelARegistrationExtraProvincialLimitedLiabilityCompanyName )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">-------: REG_LLCM003_CancelARegistrationExtraProvincialLimitedLiabilityCompanyName -&gt; <br/>Admin Portal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (4549be541a032ccbad9f8f8a33a6cbef)] -&gt; xpath: (//span[text()=&apos;Business Names&apos;])[2]] (tried for 90 second(s) with 200 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.onbis.Helper.HelperMethods.fluentWaitAndCheckVisible(HelperMethods.java:71)
+	at com.onbis.Pages.SOAdminOntarioBusinessRegistryDashboardPage.selectRegisterExtraProvincialLimitedLiabilityCompany(SOAdminOntarioBusinessRegistryDashboardPage.java:168)
+	at com.onbis.TestCases.REG_LLCM003_CancelARegistrationExtraProvincialLimitedLiabilityCompanyName.REG_LLCM003_CancelARegistrationExtraProvincialLimitedLiabilityCompanyName(REG_LLCM003_CancelARegistrationExtraProvincialLimitedLiabilityCompanyName.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m5">com.onbis.TestCases.REG_NFPCM007_NFPCA_FileDraftPlanOfArrangement#REG_NFPCM007_NFPCA_FileDraftPlanOfArrangement ( REG_NFPCM007_NFPCA_FileDraftPlanOfArrangement )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Admin Portal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32<br/>-------: REG_NFPCM007_NFPCA_FileDraftPlanOfArrangement-&gt; </div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (31fcccc06acf00e7cc6219480f7f2272)] -&gt; xpath: //a[@class = &apos;appSubMenuName menu-companies&apos; and @href = &apos;#&apos;]] (tried for 90 second(s) with 200 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.onbis.Helper.HelperMethods.fluentWaitAndCheckVisible(HelperMethods.java:71)
+	at com.onbis.Pages.SOAdminOntarioBusinessRegistryDashboardPage.selectIncorporateNotForProfitCorporation(SOAdminOntarioBusinessRegistryDashboardPage.java:114)
+	at com.onbis.TestCases.REG_NFPCM007_NFPCA_FileDraftPlanOfArrangement.REG_NFPCM007_NFPCA_FileDraftPlanOfArrangement(REG_NFPCM007_NFPCA_FileDraftPlanOfArrangement.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m6">com.onbis.TestCases.REG_NFPCM008_NFPCA_FileFinalPlanOfArrangement#REG_NFPCM008_NFPCA_FileFinalPlanOfArrangement ( REG_NFPCM008_NFPCA_FileFinalPlanOfArrangement )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Admin Portal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32<br/>-------: REG_NFPCM008_NFPCA_FileFinalPlanOfArrangement-&gt; <br/>Ontario Corporation Number (OCN) number is: 1000618693<br/>Incorporate an Ontario Not-for-Profit Corporation Corporation Number (OCN) number is: 1000618693<br/>Ontario Corporation Name is: Incorporate an Ontario Not-for-Profit Corporation 1000618693 ONTARIO NOT-FOR-PROFIT (1000618693)<br/>Search Result for: 10006186931000618693 ONTARIO NOT-FOR-PROFIT (1000618693)</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: (//button[contains(@class,&apos;LOCAL_FINAL_PLAN_OF&apos;)])&apos; (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.onbis.Helper.HelperMethods.highLighterMethod(HelperMethods.java:915)
+	at com.onbis.Pages.SOIncorporateOntarioBusinessCorporationPage.completeContactInformationFinalPlanOfArrangementAndSave(SOIncorporateOntarioBusinessCorporationPage.java:1064)
+	at com.onbis.TestCases.REG_NFPCM008_NFPCA_FileFinalPlanOfArrangement.REG_NFPCM008_NFPCA_FileFinalPlanOfArrangement(REG_NFPCM008_NFPCA_FileFinalPlanOfArrangement.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//button[contains(@class,&apos;LOCAL_FINAL_PLAN_OF&apos;)])&quot;}
+  (Session info: chrome=124.0.6367.92)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\MustofG\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63454}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1242eaf9c554bc9028af75e67d1783a5
+*** Element info: {Using=xpath, value=(//button[contains(@class,&apos;LOCAL_FINAL_PLAN_OF&apos;)])}
+	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy17.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 27 more
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m7">com.onbis.TestCases.REG_NFPCM011_NFPCA_ReviveNotForProfitCorporation#REG_NFPCM011_NFPCA_ReviveNotForProfitCorporation ( REG_NFPCM011_NFPCA_ReviveNotForProfitCorporation )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Admin Portal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32<br/>-------: REG_NFPCM011_NFPCA_ReviveNotForProfitCorporation-&gt; </div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (cde639ba5226843a333a06963ba0d819)] -&gt; xpath: //a[@class = &apos;appSubMenuName menu-companies&apos; and @href = &apos;#&apos;]] (tried for 90 second(s) with 200 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.onbis.Helper.HelperMethods.fluentWaitAndCheckVisible(HelperMethods.java:71)
+	at com.onbis.Pages.SOAdminOntarioBusinessRegistryDashboardPage.selectIncorporateNotForProfitCorporation(SOAdminOntarioBusinessRegistryDashboardPage.java:114)
+	at com.onbis.TestCases.REG_NFPCM011_NFPCA_ReviveNotForProfitCorporation.REG_NFPCM011_NFPCA_ReviveNotForProfitCorporation(REG_NFPCM011_NFPCA_ReviveNotForProfitCorporation.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h2>Onbis-Regression-SOAB Portal</h2><h3 id="m8">com.onbis.TestCases.BCAM010_TestCasesFileArticlesDissolveOntarioBusinessCorporation#BCAM010_TestCasesFileArticlesDissolveOntarioBusinessCorporation ( BCAM010_TestCasesFileArticlesDissolveOntarioBusinessCorporation )</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (1e75071e97b4d7bb1acbdfc4970a7266)] -&gt; xpath: //input[@type=&apos;text&apos;]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\MustofG\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64157}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1e75071e97b4d7bb1acbdfc4970a7266
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.onbis.Helper.HelperMethods.waitAndSendKeys(HelperMethods.java:431)
+	at com.onbis.Pages.OneKeyLogin.loginUsingOneKeyCredentials(OneKeyLogin.java:171)
+	at com.onbis.TestCases.BCAM010_TestCasesFileArticlesDissolveOntarioBusinessCorporation.BCAM010_TestCasesFileArticlesDissolveOntarioBusinessCorporation(BCAM010_TestCasesFileArticlesDissolveOntarioBusinessCorporation.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h2>Onbis-Regression-Partner Portal-Data Creation for Renewal</h2><h2>Onbis-Regression-Partner Portal- Renewal</h2><h2>Onbis-CR Regression Test - November 2022 Release</h2><h3 id="m9">com.onbis.TestCases.CR_4258_EPForeignWithShare_EntityNameJurisdictionNonEditable_TC2#CR_4258_EPForeignWithShare_EntityNameJurisdictionNonEditable_TC2 ( CR_4258_EPForeignWithShare_EntityNameJurisdictionNonEditable_TC2 )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">-------: CR_4258_EPForeignWithShare_EntityNameJurisdictionNonEditable_TC2 -&gt; <br/>Admin Portal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (992f68c1ba3993418a311743c816af9a)] -&gt; xpath: //a[@class = &apos;appSubMenuName menu-companies&apos; and @href = &apos;#&apos;]] (tried for 90 second(s) with 200 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.onbis.Helper.HelperMethods.fluentWaitAndCheckVisible(HelperMethods.java:71)
+	at com.onbis.Pages.SOAdminOntarioBusinessRegistryDashboardPage.selectRegistryAsApplicationForExtraProvincialLicenceForForeignCorp(SOAdminOntarioBusinessRegistryDashboardPage.java:159)
+	at com.onbis.TestCases.CR_4258_EPForeignWithShare_EntityNameJurisdictionNonEditable_TC2.CR_4258_EPForeignWithShare_EntityNameJurisdictionNonEditable_TC2(CR_4258_EPForeignWithShare_EntityNameJurisdictionNonEditable_TC2.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m10">com.onbis.TestCases.CR_4260_4279_4277_4574_4592_4628_CondoCorporationsAssignAnOCN_TC1#CR_4260_4279_4277_4574_4592_4628_CondoCorporationsAssignAnOCN_TC1 ( CR_4260_4279_4277_4574_4592_4628_CondoCorporationsAssignAnOCN_TC1 )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Admin Portal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32<br/>-------: CR_4260_4279_4277_4574_4592_4628_CondoCorporationsAssignAnOCN_TC1 -&gt; <br/>-------: This is a Negative testing for &apos;Condo Corp In-corporation&apos;
+ :-------<br/>-------: &apos;Last Name&apos; field -&gt; message displayed as &apos;Last Name must be entered.&apos; :-------<br/>-------: Last Name was not entered - error message displayed as &apos;Last Name must be entered. :-------<br/>-------: Email Address was not entered - error message displayed as &apos;Email Address must be entered. :-------<br/>-------: Confirm Email Address was not entered - error message displayed as &apos;Confirm Email Address must be entered. :-------</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()=&apos;You must upload the filing document&apos;]&quot;}
+  (Session info: chrome=124.0.6367.92)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\MustofG\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64843}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 234852b108124a84db87db97523aafec
+*** Element info: {Using=xpath, value=//div[text()=&apos;You must upload the filing document&apos;]}
+	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.onbis.Pages.SOIncorporateOntarioBusinessCorporationPage.inCompleteContactInformationAndSaveOCN(SOIncorporateOntarioBusinessCorporationPage.java:1195)
+	at com.onbis.TestCases.CR_4260_4279_4277_4574_4592_4628_CondoCorporationsAssignAnOCN_TC1.CR_4260_4279_4277_4574_4592_4628_CondoCorporationsAssignAnOCN_TC1(CR_4260_4279_4277_4574_4592_4628_CondoCorporationsAssignAnOCN_TC1.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m11">com.onbis.TestCases.CR_4260_4279_4277_4574_4592_4628_GeneralPartnershipInternationalAddress_TC3_TC4_TC5#CR_4260_4279_4277_4574_4592_4628_GeneralPartnershipInternationalAddress_TC3_TC4_TC5 ( CR_4260_4279_4277_4574_4592_4628_GeneralPartnershipInternationalAddress_TC3_TC4_TC5 )</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.name: identifier&apos; (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.onbis.Helper.HelperMethods.waitAndSendKeys(HelperMethods.java:431)
+	at com.onbis.Pages.PartnerPortalLoginPage.loginUsingPartnerPortalCredentials(PartnerPortalLoginPage.java:88)
+	at com.onbis.TestCases.CR_4260_4279_4277_4574_4592_4628_GeneralPartnershipInternationalAddress_TC3_TC4_TC5.CR_4260_4279_4277_4574_4592_4628_GeneralPartnershipInternationalAddress_TC3_TC4_TC5(CR_4260_4279_4277_4574_4592_4628_GeneralPartnershipInternationalAddress_TC3_TC4_TC5.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;identifier&apos;]&quot;}
+  (Session info: chrome=124.0.6367.92)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\MustofG\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64609}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b6be48116f6fb8ee472661a13c877a34
+*** Element info: {Using=name, value=identifier}
+	at sun.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy17.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 27 more
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m12">com.onbis.TestCases.CR_4260_4279_4277_4574_4592_4628_SoleProp_TC1_3#CR_4260_4279_4277_4574_4592_4628_SoleProp_TC1 ( CR_4260_4279_4277_4574_4592_4628_SoleProp_TC1 )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">-------: CR_4260_4279_4277_4574_4592_4628_SoleProp_TC1 -&gt; <br/>-------: This is a Negative testing for &apos;Sole Prop.  Registration&apos;
+ :-------<br/>Admin Portal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (a254297b063ed2c53e1f6c28bff62335)] -&gt; xpath: //span[text()=&apos;Sole Proprietorship&apos;]] (tried for 90 second(s) with 200 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.onbis.Helper.HelperMethods.fluentWaitAndCheckVisible(HelperMethods.java:71)
+	at com.onbis.Pages.SOAdminOntarioBusinessRegistryDashboardPage.selectRegistryAsSolePropRegisterBusinessNameSoleProp(SOAdminOntarioBusinessRegistryDashboardPage.java:177)
+	at com.onbis.TestCases.CR_4260_4279_4277_4574_4592_4628_SoleProp_TC1_3.CR_4260_4279_4277_4574_4592_4628_SoleProp_TC1(CR_4260_4279_4277_4574_4592_4628_SoleProp_TC1_3.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m13">com.onbis.TestCases.CR_4260_4279_4277_4574_4592_4628_SoleProp_TC1_3#CR_4260_4279_4277_4574_4592_4628_SoleProp_TC2_TC3 ( CR_4260_4279_4277_4574_4592_4628_SoleProp_TC2_TC3 )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Admin Portal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32<br/>-------: CR_4260_4279_4277_4574_4592_4628_SoleProp_TC2 -&gt; </div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (726fabfcc236f80123d6dfbe777efb4d)] -&gt; xpath: //span[text()=&apos;Sole Proprietorship&apos;]] (tried for 90 second(s) with 200 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.onbis.Helper.HelperMethods.fluentWaitAndCheckVisible(HelperMethods.java:71)
+	at com.onbis.Pages.SOAdminOntarioBusinessRegistryDashboardPage.selectRegistryAsSolePropRegisterBusinessNameSoleProp(SOAdminOntarioBusinessRegistryDashboardPage.java:177)
+	at com.onbis.TestCases.CR_4260_4279_4277_4574_4592_4628_SoleProp_TC1_3.CR_4260_4279_4277_4574_4592_4628_SoleProp_TC2_TC3(CR_4260_4279_4277_4574_4592_4628_SoleProp_TC1_3.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m14">com.onbis.TestCases.CR_4280_OntarioBusinessIncorporation_RequestCertificate_CourtOrderedWindingUp_TC1#CR_4280_OntarioBusinessIncorporation_RequestCertificate_CourtOrderedWindingUp_TC1 ( CR_4280_OntarioBusinessIncorporation_RequestCertificate_CourtOrderedWindingUp_TC1 )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">-------: CR_4280_OntarioBusinessIncorporation_RequestCertificate_CourtOrderedWindingUp_TC1 -&gt; <br/>Admin Portal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (ba132ce36a428709c7d9f89fe20c90b9)] -&gt; xpath: //a[@class = &apos;appSubMenuName menu-companies&apos; and @href = &apos;#&apos;]] (tried for 90 second(s) with 200 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.onbis.Helper.HelperMethods.fluentWaitAndCheckVisible(HelperMethods.java:71)
+	at com.onbis.Pages.PartnerSoleProprietorshipRegistrationPage.selectRegistryAsIncorporateOntarioBusinessCorporation(PartnerSoleProprietorshipRegistrationPage.java:2604)
+	at com.onbis.TestCases.CR_4280_OntarioBusinessIncorporation_RequestCertificate_CourtOrderedWindingUp_TC1.CR_4280_OntarioBusinessIncorporation_RequestCertificate_CourtOrderedWindingUp_TC1(CR_4280_OntarioBusinessIncorporation_RequestCertificate_CourtOrderedWindingUp_TC1.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m15">com.onbis.TestCases.CR_4348_RegisterExtraProvincialLimitedLiabilityCompany_AddressOfGeneralManager_TC1#CR_4348_RegisterExtraProvincialLimitedLiabilityCompany_AddressOfGeneralManager_TC1 ( CR_4348_RegisterExtraProvincialLimitedLiabilityCompany_AddressOfGeneralManager_TC1 )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">-------: CR_4348_RegisterExtraProvincialLimitedLiabilityCompany_AddressOfGeneralManager_TC1 -&gt; <br/>Admin Portal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=124.0.6367.92)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\MustofG\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65002}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e566b313ffeff80cd4e74e3bcc301737
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy17.sendKeys(Unknown Source)
+	at com.onbis.Helper.HelperMethods.waitAndSendKeys(HelperMethods.java:444)
+	at com.onbis.Pages.SOIncorporateOntarioBusinessCorporationPage.completeContactInformationRegisterExtraProvincialLimitedLiabilityCompanyAndSave(SOIncorporateOntarioBusinessCorporationPage.java:1234)
+	at com.onbis.TestCases.CR_4348_RegisterExtraProvincialLimitedLiabilityCompany_AddressOfGeneralManager_TC1.CR_4348_RegisterExtraProvincialLimitedLiabilityCompany_AddressOfGeneralManager_TC1(CR_4348_RegisterExtraProvincialLimitedLiabilityCompany_AddressOfGeneralManager_TC1.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m16">com.onbis.TestCases.CR_4437_EPFCWithShare_FileArticlesOfContinuanceUnderBCA_RequestedPastDateForContinuance_TC1#CR_4437_EPFCWithShare_FileArticlesOfContinuanceUnderBCA_RequestedPastDateForContinuance_TC1 ( CR_4437_EPFCWithShare_FileArticlesOfContinuanceUnderBCA_RequestedPastDateForContinuance_TC1 )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">-------: CR_4437_EPFCWithShare_FileArticlesOfContinuanceUnderBCA_RequestedPastDateForContinuance_TC1 -&gt; <br/>Admin Portal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (72be3903a0d26699cf6ad6c343b4ee64)] -&gt; xpath: //a[@class = &apos;appSubMenuName menu-companies&apos; and @href = &apos;#&apos;]] (tried for 90 second(s) with 200 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.onbis.Helper.HelperMethods.fluentWaitAndCheckVisible(HelperMethods.java:71)
+	at com.onbis.Pages.SOAdminOntarioBusinessRegistryDashboardPage.selectRegistryAsApplicationForExtraProvincialLicenceForForeignCorp(SOAdminOntarioBusinessRegistryDashboardPage.java:159)
+	at com.onbis.TestCases.CR_4437_EPFCWithShare_FileArticlesOfContinuanceUnderBCA_RequestedPastDateForContinuance_TC1.CR_4437_EPFCWithShare_FileArticlesOfContinuanceUnderBCA_RequestedPastDateForContinuance_TC1(CR_4437_EPFCWithShare_FileArticlesOfContinuanceUnderBCA_RequestedPastDateForContinuance_TC1.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m17">com.onbis.TestCases.CR_4254_AnnualReturnOption_ExtraProvincialLicenceForAForeignCorporation_TC3#CR_4254_AnnualReturnOption_ExtraProvincialLicenceForAForeignCorporation_TC3 ( CR_4254_AnnualReturnOption_ExtraProvincialLicenceForAForeignCorporation_TC3 )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">-------: CR_4254_AnnualReturnOption_ExtraProvincialLicenceForAForeignCorporation_TC3 -&gt; <br/>Admin Portal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32<br/>Search Result for: &quot;PM WELLNESS HUNGARY&quot; KFT (1771397)<br/>The &apos;File Annual Return&apos; option is displayed in drop-down menu under the &apos;Make Changes&apos; Menu</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m18">com.onbis.TestCases.CR_4349_ExtraProvincialLicence_CorporationdAsAgentFor_TC1_TC2#CR_4349_ExtraProvincialLicence_CorporationdAsAgentFor_TC1_TC2 ( CR_4349_ExtraProvincialLicence_CorporationdAsAgentFor_TC1_TC2 )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">-------: CR_4349_ExtraProvincialLicence_CorporationdAsAgentFor_TC1_TC2 -&gt; <br/>Admin Portal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32<br/>This is a negative test  -&gt; 
+
+   The negative  OCN &apos;1000618645222&apos; is NOT accepted in OBR<br/>Ontario Business Incorporation number &apos;1000618645 ONTARIO CORP.&apos; was selected<br/>Search Result for: JZ73GS3R15IFL3EVG4068 test inc.JZ73GS3R15IFL3EVG4068 TEST INC. (1000618704)<br/>The OCN and the name of the corporation As Agent is displayed on the output as :JZ73GS3R15IFL3EVG4068 TEST INC. (1000618704)<br/>Transaction Number is :APP-A10247671507<br/>Business Name Registration &apos;JZ73GS3R15IFL3EVG4068 TEST INC. (1000618704)&apos; for a EPCA - Extra-Provincial Foreign Licence is verified.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h2>Onbis-CR Regression Test - February 2023 Release</h2><h3 id="m19">com.onbis.TestCases.CR_4796_ActiveOntarioCorporationWithBusinessNam_FileArticlesOfContinuance#setUp ( setUp )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: no such execution context
+  (Session info: chrome=124.0.6367.92)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\MustofG\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61064}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 383d0b52670b5ecb30df1632b96d8793
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:694)
+	at com.onbis.TestCases.BaseTestSOAdmin.setUp(BaseTestSOAdmin.java:48)
+	at sun.reflect.GeneratedMethodAccessor49.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m20">com.onbis.TestCases.CR_4751_ActiveNFPCA_WithActiveBusinessName_FileArticlesOfDissolution#CR_4751_ActiveNFPCA_WithActiveBusinessName_FileArticlesOfDissolution ( CR_4751_ActiveNFPCA_WithActiveBusinessName_FileArticlesOfDissolution )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Admin Portal build number is: 2.1.6.1 :: 2.1.6.1 :: 2024/06/11 17:32<br/>-------: CR_4751_ActiveNFPCA_WithActiveBusinessName_FileArticlesOfDissolution-&gt; </div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (06bac8896dac1c81782c87f4f2273904)] -&gt; xpath: //a[@class = &apos;appSubMenuName menu-companies&apos; and @href = &apos;#&apos;]] (tried for 90 second(s) with 200 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.onbis.Helper.HelperMethods.fluentWaitAndCheckVisible(HelperMethods.java:71)
+	at com.onbis.Pages.SOAdminOntarioBusinessRegistryDashboardPage.selectIncorporateNotForProfitCorporation(SOAdminOntarioBusinessRegistryDashboardPage.java:114)
+	at com.onbis.TestCases.CR_4751_ActiveNFPCA_WithActiveBusinessName_FileArticlesOfDissolution.CR_4751_ActiveNFPCA_WithActiveBusinessName_FileArticlesOfDissolution(CR_4751_ActiveNFPCA_WithActiveBusinessName_FileArticlesOfDissolution.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m21">com.onbis.TestCases.CR_4796_ActiveOntarioCorporationWithBusinessNam_FileArticlesOfContinuance#CR_4796_ActiveOntarioCorporationWithBusinessNam_FileArticlesOfContinuance ( CR_4796_ActiveOntarioCorporationWithBusinessNam_FileArticlesOfContinuance )</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: no such execution context
+  (Session info: chrome=124.0.6367.92)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03174383&apos;, ip: &apos;10.61.66.182&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_281&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 124.0.6367.92, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\MustofG\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61064}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 383d0b52670b5ecb30df1632b96d8793
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:694)
+	at com.onbis.TestCases.BaseTestSOAdmin.setUp(BaseTestSOAdmin.java:48)
+	at sun.reflect.GeneratedMethodAccessor49.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>

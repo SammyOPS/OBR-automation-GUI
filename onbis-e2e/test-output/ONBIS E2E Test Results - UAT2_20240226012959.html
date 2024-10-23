@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>ONBIS E2E Test Results</title><style type="text/css">@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+
+table {
+    margin-left: 10%;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    border-collapse: collapse;
+    empty-cells: show;
+}
+
+th, td {
+    border: 1px solid #009;
+    padding: .25em .5em;
+    font-weight: normal;
+}
+
+/* Style the first rows of the table */
+table:first-of-type tr:first-of-type,
+table#summary thead tr:first-of-type,
+table.result tbody tr:first-of-type {
+    background-color: #b2817b; / * #666; */
+    color: white;
+    font-weight: lighter;
+    height: 4em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/* Hide "MoL Tests" row */
+table:first-of-type tr:nth-child(2),
+table#summary tbody:first-of-type tr{
+    display: none;
+}
+
+table#summary tbody th {
+    padding-top:32px;
+    text-align: left;
+    font-weight: bold;
+}
+
+table:first-of-type tr:last-of-type {
+    border-top: 2px solid #979797;
+    background-color: #E6E6E6;
+}
+
+td {
+    vertical-align: top;
+}
+
+.stripe td {
+    background-color: #EFEFEF;
+}
+
+.num {
+    text-align: right;
+}
+
+.passedodd td {
+    background-color: #3F3;
+}
+
+.passedeven td {
+    background-color: #0A0;
+}
+
+.skippedodd td {
+    background-color: #DDD;
+}
+
+.skippedeven td {
+    background-color: #CCC;
+}
+
+.failedodd td {
+    background-color: #F33;
+}
+
+.failedeven td, .stripe {
+    background-color: #D00;
+}
+
+h2, h3 {
+    margin-left: 10%;
+    font-weight: normal;
+}
+
+table.result th {
+    text-align: left;
+}
+
+table.result {
+    margin-left: 10%;
+    margin-bottom: 32px;
+}
+
+.stacktrace {
+    overflow: auto;
+    width: 1024px;
+    white-space: pre;
+    font-family: "Courier New";
+}
+
+/* back to summary */
+.totop {
+    font-size: 85%;
+    text-align: center;
+    border-bottom: 0.625rem solid #7bb29c;       /* 979797; */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1rem;
+}
+
+#header {
+    background-color: #333;
+    padding: 8px 8px 8px 64px;
+    color: white;
+}
+#header span#logo {
+    padding-left:32px;
+    font-size: 1.45em;
+    color: #eee;
+}</style></head><body><div id='header'><img src='images/logo.png' width='128px'><span id='logo'><b>ONBIS E2E Test Results</b></span></div><div id='header'> Reporting Date & Time           : 26-Feb-2024 03:05:PM</span></div><div id='header'> Test Execution Host Name &  IP  : ON34C03602768/10.61.32.103</span></div><div id='header'> Test Execution OS Name: Windows 10</span></div><div id='header'> Test Execution Java Version     : 1.8.0_202</span></div><div id='header'> Test Execution User Name        : MustofG</span></div><div id='header'> Test Execution Environment      : UAT2</span></div><table><tr><th><b><ins>Test Suite<b></ins></th><th><font color="green"><b><ins>Passed</font color><b></ins></th><th><font color="yellow"><b><ins>Skipped</font color><b></ins></th><th><font color="red"><b><ins>Failed</font color><b></ins></th><th><font color="blue"><b><ins>D:HH:MM:SS</font color><b></ins></th><th><b><ins>Included Groups<b></ins></th><th><b><ins>Excluded Groups<b></ins></th></tr><tr><th colspan="7">Onbis E2E Tests</th></tr><tr><td><a href="#t0">Onbis-Sanity-PartnerPortal-Chrome</a></td><td class="num">13</td><td class="num">0</td><td class="num attn">3</td><td class="num">0:00:56:26</td><td></td><td></td></tr><tr class="stripe"><td><a href="#t1">Onbis-Sanity-SOAB Portal-Chrome - SOAB Account Incorporate Tests </a></td><td class="num">7</td><td class="num">0</td><td class="num attn">2</td><td class="num">0:00:30:03</td><td></td><td></td></tr><tr><td><a href="#t2">Onbis-Sanity-SOAdmin-Chrome</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0:00:09:25</td><td></td><td></td></tr><tr class="stripe"><td><a href="#t3">Onbis-Regression-Partner Portal</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0:00:00:00</td><td></td><td></td></tr><tr><td><a href="#t4">Onbis-Regression-Admin Portal</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0:00:00:00</td><td></td><td></td></tr><tr class="stripe"><td><a href="#t5">Onbis-Regression-SOAB Portal</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0:00:00:00</td><td></td><td></td></tr><tr><td><a href="#t6">Onbis-Regression-Partner Portal-Data Creation for Renewal</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0:00:00:00</td><td></td><td></td></tr><tr class="stripe"><td><a href="#t7">Onbis-Regression-Partner Portal- Renewal</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0:00:00:00</td><td></td><td></td></tr><tr><td><a href="#t8">Onbis-CR Regression Test - November 2022 Release</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0:00:00:00</td><td></td><td></td></tr><tr class="stripe"><td><a href="#t9">Onbis-CR Regression Test - February 2023 Release</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0:00:00:00</td><td></td><td></td></tr><tr><th><b>Total :-------><b></th><th class="num">23</th><th class="num">0</th><th class="num attn">5</th><th class="num">0:01:35:55</th><th colspan="2"></th></tr></table><table><thead><tr><th><b><ins>Class Name<b></ins></th><th><b><ins>Method Name<b></ins></th><th><b><ins>Test Name<b></ins></th><th><b><ins>Test Starts<b></ins></th><th><font color="blue"><b><ins>D:HH:MM:SS</font color><b></ins></th></tr></thead><tbody><tr><th colspan="5">Onbis E2E Tests</th></tr></tbody><tbody id="t0"><tr><th colspan="5">Onbis-Sanity-PartnerPortal-Chrome &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.onbis.TestCases.TC11_BNR002_RegisterABusinessNameForACorporation</td><td><a href="#m0">TC11_BNR002_RegisterABusinessNameForACorporation</a></td><td rowspan="1">TC11_BNR002_RegisterABusinessNameForACorporation</td><td rowspan="1">01:38:45 PM</td><td rowspan="1">0:00:04:36</td></tr><tr class="failedodd"><td rowspan="1">com.onbis.TestCases.TC11_BNR002_RegisterABusinessNameForACorporation_Continues</td><td><a href="#m1">TC11_BNR002_RegisterABusinessNameForACorporation_Continues</a></td><td rowspan="1">TC11_BNR002_RegisterABusinessNameForACorporation_Continues</td><td rowspan="1">01:43:34 PM</td><td rowspan="1">0:00:04:28</td></tr><tr class="failedeven"><td rowspan="1">com.onbis.TestCases.TC19_BNM001_AmendARegistrationOfABusinessNameForASoleProprietorship</td><td><a href="#m2">TC19_BNM001_AmendARegistrationOfABusinessNameForASoleProprietorship</a></td><td rowspan="1">TC19_BNM001_AmendARegistrationOfABusinessNameForASoleProprietorship</td><td rowspan="1">02:00:50 PM</td><td rowspan="1">0:00:07:01</td></tr><tr><th colspan="5">Onbis-Sanity-PartnerPortal-Chrome &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.onbis.TestCases.TC12_LLCR001_RegisterAnExtraProvincialLimitedLiabilityCompanyName</td><td><a href="#m3">TC12_LLCR001_RegisterAnExtraProvincialLimitedLiabilityCompanyName</a></td><td rowspan="1">TC12_LLCR001_RegisterAnExtraProvincialLimitedLiabilityCompanyName</td><td rowspan="1">01:32:51 PM</td><td rowspan="1">0:00:02:47</td></tr><tr class="passedodd"><td rowspan="1">com.onbis.TestCases.TC13_BNR001_RegisterASoleProprietorshipName</td><td><a href="#m4">TC13_BNR001_RegisterASoleProprietorshipName</a></td><td rowspan="1">TC13_BNR001_RegisterASoleProprietorshipName</td><td rowspan="1">01:30:01 PM</td><td rowspan="1">0:00:02:47</td></tr><tr class="passedeven"><td rowspan="1">com.onbis.TestCases.TC14_BNR004_RegisterABusinessNameForALimitedPartnership</td><td><a href="#m5">TC14_BNR004_RegisterABusinessNameForALimitedPartnership</a></td><td rowspan="1">TC14_BNR004_RegisterABusinessNameForALimitedPartnership</td><td rowspan="1">01:48:08 PM</td><td rowspan="1">0:00:03:03</td></tr><tr class="passedodd"><td rowspan="1">com.onbis.TestCases.TC15_BNR003_RegisterABusinessNameForAGeneralPartnership</td><td><a href="#m6">TC15_BNR003_RegisterABusinessNameForAGeneralPartnership</a></td><td rowspan="1">TC15_BNR003_RegisterABusinessNameForAGeneralPartnership</td><td rowspan="1">01:35:40 PM</td><td rowspan="1">0:00:03:02</td></tr><tr class="passedeven"><td rowspan="1">com.onbis.TestCases.TC16_BNM007_AmendARegistrationOfABusinessNameForAGeneralPartnership</td><td><a href="#m7">TC16_BNM007_AmendARegistrationOfABusinessNameForAGeneralPartnership</a></td><td rowspan="1">TC16_BNM007_AmendARegistrationOfABusinessNameForAGeneralPartnership</td><td rowspan="1">01:51:14 PM</td><td rowspan="1">0:00:06:05</td></tr><tr class="passedodd"><td rowspan="1">com.onbis.TestCases.TC17_BNM012_CancelABusinessNameRegistrationForACorporation</td><td><a href="#m8">TC17_BNM012_CancelABusinessNameRegistrationForACorporation</a></td><td rowspan="1">TC17_BNM012_CancelABusinessNameRegistrationForACorporation</td><td rowspan="1">02:11:43 PM</td><td rowspan="1">0:00:04:49</td></tr><tr class="passedeven"><td rowspan="1">com.onbis.TestCases.TC18_LLCM001_AmendARegistrationOfAnExtraProvincialLimitedLiabilityCompanyName</td><td><a href="#m9">TC18_LLCM001_AmendARegistrationOfAnExtraProvincialLimitedLiabilityCompanyName</a></td><td rowspan="1">TC18_LLCM001_AmendARegistrationOfAnExtraProvincialLimitedLiabilityCompanyName</td><td rowspan="1">01:57:22 PM</td><td rowspan="1">0:00:03:26</td></tr><tr class="passedodd"><td rowspan="1">com.onbis.TestCases.TC20_PSM001_FileADeclarationOfChangeOfAnOntarioLimitedPartnership</td><td><a href="#m10">TC20_PSM001_FileADeclarationOfChangeOfAnOntarioLimitedPartnership</a></td><td rowspan="1">TC20_PSM001_FileADeclarationOfChangeOfAnOntarioLimitedPartnership</td><td rowspan="1">02:16:34 PM</td><td rowspan="1">0:00:02:04</td></tr><tr class="passedeven"><td rowspan="1">com.onbis.TestCases.TC21_PSR002_FileADeclarationOfAnExtraProvincialLimitedPartnership</td><td><a href="#m11">TC21_PSR002_FileADeclarationOfAnExtraProvincialLimitedPartnership</a></td><td rowspan="1">TC21_PSR002_FileADeclarationOfAnExtraProvincialLimitedPartnership</td><td rowspan="1">02:22:29 PM</td><td rowspan="1">0:00:01:58</td></tr><tr class="passedodd"><td rowspan="1">com.onbis.TestCases.TC22_PSR003_RegisterAFirmNameForAGeneralPartnership</td><td><a href="#m12">TC22_PSR003_RegisterAFirmNameForAGeneralPartnership</a></td><td rowspan="1">TC22_PSR003_RegisterAFirmNameForAGeneralPartnership</td><td rowspan="1">02:24:30 PM</td><td rowspan="1">0:00:01:54</td></tr><tr class="passedeven"><td rowspan="1">com.onbis.TestCases.TC23_PSR004_RegisterAFirmNameForAnOntarioLimitedLiabilityPartnership</td><td><a href="#m13">TC23_PSR004_RegisterAFirmNameForAnOntarioLimitedLiabilityPartnership</a></td><td rowspan="1">TC23_PSR004_RegisterAFirmNameForAnOntarioLimitedLiabilityPartnership</td><td rowspan="1">02:18:41 PM</td><td rowspan="1">0:00:01:49</td></tr><tr class="passedodd"><td rowspan="1">com.onbis.TestCases.TC24_PSR005_RegisterAFirmNameForAnExtraProvincialLimitedLiabilityPartnership</td><td><a href="#m14">TC24_PSR005_RegisterAFirmNameForAnExtraProvincialLimitedLiabilityPartnership</a></td><td rowspan="1">TC24_PSR005_RegisterAFirmNameForAnExtraProvincialLimitedLiabilityPartnership</td><td rowspan="1">02:20:33 PM</td><td rowspan="1">0:00:01:53</td></tr><tr class="passedeven"><td rowspan="1">com.onbis.TestCases.TC25_PSM009_CancelARegistrationOfAFirmNameForAGeneralPartnership</td><td><a href="#m15">TC25_PSM009_CancelARegistrationOfAFirmNameForAGeneralPartnership</a></td><td rowspan="1">TC25_PSM009_CancelARegistrationOfAFirmNameForAGeneralPartnership</td><td rowspan="1">02:07:58 PM</td><td rowspan="1">0:00:03:42</td></tr></tbody><tbody id="t1"><tr><th colspan="5">Onbis-Sanity-SOAB Portal-Chrome - SOAB Account Incorporate Tests  &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.onbis.TestCases.TC04_BCAR005_TestCasesForContinuanceCreate</td><td><a href="#m16">TC04_BCAR005_TestCasesForContinuanceCreate</a></td><td rowspan="1">TC04_BCAR005_TestCasesForContinuanceCreate</td><td rowspan="1">02:33:28 PM</td><td rowspan="1">0:00:02:41</td></tr><tr class="failedodd"><td rowspan="1">com.onbis.TestCases.TC28_BCAR003_TestCasesForAmalgamation</td><td><a href="#m17">TC28_BCAR003_TestCasesForAmalgamation</a></td><td rowspan="1">TC28_BCAR003_TestCasesForAmalgamation</td><td rowspan="1">02:52:02 PM</td><td rowspan="1">0:00:04:17</td></tr><tr><th colspan="5">Onbis-Sanity-SOAB Portal-Chrome - SOAB Account Incorporate Tests  &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.onbis.TestCases.TC01_BCAR001_TestCasesForIncorportatDeleteAProfile</td><td><a href="#m18">TC01_BCAR001_TestCasesForIncorportatDeleteAProfile</a></td><td rowspan="1">TC01_BCAR001_TestCasesForIncorportatDeleteAProfile</td><td rowspan="1">02:26:26 PM</td><td rowspan="1">0:00:01:23</td></tr><tr class="passedodd"><td rowspan="1">com.onbis.TestCases.TC01_BCAR001_TestCasesForIncorportatNumber</td><td><a href="#m19">TC01_BCAR001_TestCasesForIncorportatNumber</a></td><td rowspan="1">TC01_BCAR001_TestCasesForIncorportatNumber</td><td rowspan="1">02:27:52 PM</td><td rowspan="1">0:00:02:45</td></tr><tr class="passedeven"><td rowspan="1">com.onbis.TestCases.TC02_BCAR001_TestCasesForIncorportateName</td><td><a href="#m20">TC02_BCAR001_TestCasesForIncorportateName</a></td><td rowspan="1">TC02_BCAR001_TestCasesForIncorportateName</td><td rowspan="1">02:30:40 PM</td><td rowspan="1">0:00:02:45</td></tr><tr class="passedodd"><td rowspan="1">com.onbis.TestCases.TC05_NFPCR001_IncorporateANotForProfitCorporation</td><td><a href="#m21">TC05_NFPCR001_IncorporateANotForProfitCorporation</a></td><td rowspan="1">TC05_NFPCR001_IncorporateANotForProfitCorporation</td><td rowspan="1">02:36:21 PM</td><td rowspan="1">0:00:03:25</td></tr><tr class="passedeven"><td rowspan="1">com.onbis.TestCases.TC06_EPCR001_ApplicationForEPLicenceForeignCorpWithShare</td><td><a href="#m22">TC06_EPCR001_ApplicationForEPLicenceForeignCorpWithShare</a></td><td rowspan="1">TC06_EPCR001_ApplicationForEPLicenceForeignCorpWithShare</td><td rowspan="1">02:39:48 PM</td><td rowspan="1">0:00:03:10</td></tr><tr class="passedodd"><td rowspan="1">com.onbis.TestCases.TC26_BCAM004_TestCasesRestateArticlesOfIncorporation</td><td><a href="#m23">TC26_BCAM004_TestCasesRestateArticlesOfIncorporation</a></td><td rowspan="1">TC26_BCAM004_TestCasesRestateArticlesOfIncorporation</td><td rowspan="1">02:43:00 PM</td><td rowspan="1">0:00:04:31</td></tr><tr class="passedeven"><td rowspan="1">com.onbis.TestCases.TC27_BCAM009_TestCasesFileArticlesOfReorganization</td><td><a href="#m24">TC27_BCAM009_TestCasesFileArticlesOfReorganization</a></td><td rowspan="1">TC27_BCAM009_TestCasesFileArticlesOfReorganization</td><td rowspan="1">02:47:34 PM</td><td rowspan="1">0:00:04:25</td></tr></tbody><tbody id="t2"><tr><th colspan="5">Onbis-Sanity-SOAdmin-Chrome &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.onbis.TestCases.TC03_OCR001_AssignAnOCN</td><td><a href="#m25">TC03_OCR001_AssignAnOCN</a></td><td rowspan="1">TC03_OCR001_AssignAnOCN</td><td rowspan="1">02:56:37 PM</td><td rowspan="1">0:00:01:14</td></tr><tr class="passedodd"><td rowspan="1">com.onbis.TestCases.TC06_07_08_CIA004_CIA005_InitialReturnForForeignCor_AnnualReturnForeignCorpWithShare</td><td><a href="#m26">TC06_07_08_CIA004_CIA005_InitialReturnForForeignCor_AnnualReturnForeignCorpWithShare</a></td><td rowspan="1">TC06_07_08_CIA004_CIA005_InitialReturnForForeignCor_AnnualReturnForeignCorpWithShare</td><td rowspan="1">03:01:44 PM</td><td rowspan="1">0:00:04:08</td></tr><tr class="passedeven"><td rowspan="1">com.onbis.TestCases.TC09_10_CIA001_CIA003_InitialReturnForONCorp_NoticeOfChangeForAnOntarioCorporation</td><td><a href="#m27">TC09_10_CIA001_CIA003_InitialReturnForONCorp_NoticeOfChangeForAnOntarioCorporation</a></td><td rowspan="1">TC09_10_CIA001_CIA003_InitialReturnForONCorp_NoticeOfChangeForAnOntarioCorporation</td><td rowspan="1">02:58:00 PM</td><td rowspan="1">0:00:03:35</td></tr></tbody><tbody id="t3"></tbody><tbody id="t4"></tbody><tbody id="t5"></tbody><tbody id="t6"></tbody><tbody id="t7"></tbody><tbody id="t8"></tbody><tbody id="t9"></tbody></table><h2>Onbis-Sanity-PartnerPortal-Chrome</h2><h3 id="m0">com.onbis.TestCases.TC11_BNR002_RegisterABusinessNameForACorporation#TC11_BNR002_RegisterABusinessNameForACorporation ( TC11_BNR002_RegisterABusinessNameForACorporation )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">PartnerPortal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //button[contains(@class,&apos;brRegisterLocalCompany-asyncContainer-wizardBox-detailsTab-details-localNameBox-currentEntityNames-currentEntityName-notNumberNameBox-enName-resetNuansReport&apos;)]&apos; (tried for 120 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.onbis.Helper.HelperMethods.fluentLongWaitAndCheckVisible(HelperMethods.java:79)
+	at com.onbis.Pages.PartnerSoleProprietorshipRegistrationPage.completeCorporationNameAndSave(PartnerSoleProprietorshipRegistrationPage.java:2452)
+	at com.onbis.TestCases.TC11_BNR002_RegisterABusinessNameForACorporation.TC11_BNR002_RegisterABusinessNameForACorporation(TC11_BNR002_RegisterABusinessNameForACorporation.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(@class,&apos;brRegisterLocalCompany-asyncContainer-wizardBox-detailsTab-details-localNameBox-currentEntityNames-currentEntityName-notNumberNameBox-enName-resetNuansReport&apos;)]&quot;}
+  (Session info: chrome=113.0.5672.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03602768&apos;, ip: &apos;10.61.32.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\MustofG\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:64132}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a2978aedf37537b28a0322356f043eba
+*** Element info: {Using=xpath, value=//button[contains(@class,&apos;brRegisterLocalCompany-asyncContainer-wizardBox-detailsTab-details-localNameBox-currentEntityNames-currentEntityName-notNumberNameBox-enName-resetNuansReport&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 27 more
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m1">com.onbis.TestCases.TC11_BNR002_RegisterABusinessNameForACorporation_Continues#TC11_BNR002_RegisterABusinessNameForACorporation_Continues ( TC11_BNR002_RegisterABusinessNameForACorporation_Continues )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Admin Portal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: (//span[text()=&apos;Business Names&apos;])[3]&apos; (tried for 90 second(s) with 200 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.onbis.Helper.HelperMethods.fluentWaitAndCheckVisible(HelperMethods.java:71)
+	at com.onbis.Pages.SOIncorporateOntarioBusinessCorporationPage.registerABusinessName(SOIncorporateOntarioBusinessCorporationPage.java:6824)
+	at com.onbis.TestCases.TC11_BNR002_RegisterABusinessNameForACorporation_Continues.TC11_BNR002_RegisterABusinessNameForACorporation_Continues(TC11_BNR002_RegisterABusinessNameForACorporation_Continues.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[text()=&apos;Business Names&apos;])[3]&quot;}
+  (Session info: chrome=113.0.5672.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03602768&apos;, ip: &apos;10.61.32.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\MustofG\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:64560}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1867ed806418595a106266d496ee07ee
+*** Element info: {Using=xpath, value=(//span[text()=&apos;Business Names&apos;])[3]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 27 more
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m2">com.onbis.TestCases.TC19_BNM001_AmendARegistrationOfABusinessNameForASoleProprietorship#TC19_BNM001_AmendARegistrationOfABusinessNameForASoleProprietorship ( TC19_BNM001_AmendARegistrationOfABusinessNameForASoleProprietorship )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">PartnerPortal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52<br/>Business name and number is: K0H11KZN6L8TG6CFO (1000605800)</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //span[text()=&apos;Filings&apos;]&apos; (tried for 90 second(s) with 200 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.onbis.Helper.HelperMethods.fluentWaitAndCheckVisible(HelperMethods.java:71)
+	at com.onbis.Pages.PartnerSoleProprietorshipRegistrationPage.soleProprietorshipIsUpdated(PartnerSoleProprietorshipRegistrationPage.java:3202)
+	at com.onbis.TestCases.TC19_BNM001_AmendARegistrationOfABusinessNameForASoleProprietorship.TC19_BNM001_AmendARegistrationOfABusinessNameForASoleProprietorship(TC19_BNM001_AmendARegistrationOfABusinessNameForASoleProprietorship.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;Filings&apos;]&quot;}
+  (Session info: chrome=113.0.5672.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03602768&apos;, ip: &apos;10.61.32.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\MustofG\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:50071}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f65a203b19ca1b151ef3d7169a4d242
+*** Element info: {Using=xpath, value=//span[text()=&apos;Filings&apos;]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy20.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 27 more
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m3">com.onbis.TestCases.TC12_LLCR001_RegisterAnExtraProvincialLimitedLiabilityCompanyName#TC12_LLCR001_RegisterAnExtraProvincialLimitedLiabilityCompanyName ( TC12_LLCR001_RegisterAnExtraProvincialLimitedLiabilityCompanyName )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">PartnerPortal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52<br/>Business name and number is: TZ1W1Q7OGQ5L8NJOG (1000605793)</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m4">com.onbis.TestCases.TC13_BNR001_RegisterASoleProprietorshipName#TC13_BNR001_RegisterASoleProprietorshipName ( TC13_BNR001_RegisterASoleProprietorshipName )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">PartnerPortal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52<br/>Business name and number is: O2VM866KYPK1PR1RM (1000605792)</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m5">com.onbis.TestCases.TC14_BNR004_RegisterABusinessNameForALimitedPartnership#TC14_BNR004_RegisterABusinessNameForALimitedPartnership ( TC14_BNR004_RegisterABusinessNameForALimitedPartnership )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">PartnerPortal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52<br/>Business name and number is: QGLK4PRA7F951IDNG (1000605796)</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m6">com.onbis.TestCases.TC15_BNR003_RegisterABusinessNameForAGeneralPartnership#TC15_BNR003_RegisterABusinessNameForAGeneralPartnership ( TC15_BNR003_RegisterABusinessNameForAGeneralPartnership )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">PartnerPortal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52<br/>Business name and number is: DWBYZA9DIGE10BVHM (1000605794)</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m7">com.onbis.TestCases.TC16_BNM007_AmendARegistrationOfABusinessNameForAGeneralPartnership#TC16_BNM007_AmendARegistrationOfABusinessNameForAGeneralPartnership ( TC16_BNM007_AmendARegistrationOfABusinessNameForAGeneralPartnership )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">PartnerPortal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52<br/>Business name and number is: 4GZSUU4EI7RI0JQFU (1000605797)<br/>Updated Business corporation name is: FOF99AGTW8N7TTF4C<br/>Business name and number is: FOF99AGTW8N7TTF4C (1000605798)</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m8">com.onbis.TestCases.TC17_BNM012_CancelABusinessNameRegistrationForACorporation#TC17_BNM012_CancelABusinessNameRegistrationForACorporation ( TC17_BNM012_CancelABusinessNameRegistrationForACorporation )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">PartnerPortal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52<br/>Business name and number is: I37RTVLWYL01SH6YN8188 TEST INC. (1000605804)<br/>Updated Business corporation name is: U3YWUIGJAMMLKJ37T<br/>Business name and number is: U3YWUIGJAMMLKJ37T (1000605805)</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m9">com.onbis.TestCases.TC18_LLCM001_AmendARegistrationOfAnExtraProvincialLimitedLiabilityCompanyName#TC18_LLCM001_AmendARegistrationOfAnExtraProvincialLimitedLiabilityCompanyName ( TC18_LLCM001_AmendARegistrationOfAnExtraProvincialLimitedLiabilityCompanyName )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">PartnerPortal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52<br/>Business name and number is: JV5JLZ2R2C66NGHVW (1000605799)</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m10">com.onbis.TestCases.TC20_PSM001_FileADeclarationOfChangeOfAnOntarioLimitedPartnership#TC20_PSM001_FileADeclarationOfChangeOfAnOntarioLimitedPartnership ( TC20_PSM001_FileADeclarationOfChangeOfAnOntarioLimitedPartnership )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">PartnerPortal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52<br/>Business name and number is: P3HYSWS76GFKAQ0Z6 (1000605806)</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m11">com.onbis.TestCases.TC21_PSR002_FileADeclarationOfAnExtraProvincialLimitedPartnership#TC21_PSR002_FileADeclarationOfAnExtraProvincialLimitedPartnership ( TC21_PSR002_FileADeclarationOfAnExtraProvincialLimitedPartnership )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">PartnerPortal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52<br/>Business name and number is: 40D9ANOYR8IU2H0SU (1000605809)</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m12">com.onbis.TestCases.TC22_PSR003_RegisterAFirmNameForAGeneralPartnership#TC22_PSR003_RegisterAFirmNameForAGeneralPartnership ( TC22_PSR003_RegisterAFirmNameForAGeneralPartnership )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">PartnerPortal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52<br/>Business name and number is: AYNOTTVFC5W7VJHR9 (1000605810)</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m13">com.onbis.TestCases.TC23_PSR004_RegisterAFirmNameForAnOntarioLimitedLiabilityPartnership#TC23_PSR004_RegisterAFirmNameForAnOntarioLimitedLiabilityPartnership ( TC23_PSR004_RegisterAFirmNameForAnOntarioLimitedLiabilityPartnership )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">PartnerPortal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52<br/>Business name and number is: R4WY3FQ2WFH4VHTZ5 LLP (1000605807)</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m14">com.onbis.TestCases.TC24_PSR005_RegisterAFirmNameForAnExtraProvincialLimitedLiabilityPartnership#TC24_PSR005_RegisterAFirmNameForAnExtraProvincialLimitedLiabilityPartnership ( TC24_PSR005_RegisterAFirmNameForAnExtraProvincialLimitedLiabilityPartnership )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">PartnerPortal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52<br/>Business name and number is: Q10A2JJJCQXSNG522 LLP (1000605808)</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m15">com.onbis.TestCases.TC25_PSM009_CancelARegistrationOfAFirmNameForAGeneralPartnership#TC25_PSM009_CancelARegistrationOfAFirmNameForAGeneralPartnership ( TC25_PSM009_CancelARegistrationOfAFirmNameForAGeneralPartnership )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">PartnerPortal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52<br/>Business name and number is: SXY9K4VNEIEI5ESCJ (1000605802)<br/>Updated Business corporation name is: 4NHYKN1ACRVA35TRT<br/>Business name and number is: 4NHYKN1ACRVA35TRT (1000605803)</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h2>Onbis-Sanity-SOAB Portal-Chrome - SOAB Account Incorporate Tests </h2><h3 id="m16">com.onbis.TestCases.TC04_BCAR005_TestCasesForContinuanceCreate#TC04_BCAR005_TestCasesForContinuanceCreate ( TC04_BCAR005_TestCasesForContinuanceCreate )</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span style=&quot;background: lime; border: 3px solid red;&quot;&gt;...&lt;/span&gt; is not clickable at point (94, 595). Other element would receive the click: &lt;div class=&quot;appWizardButtonPad appButtonPad continueInAsONBusinessCorp-asyncContainer-wizardButtonPad appButtonPad appNotReadOnly appIndex1 appChildCount4&quot; id=&quot;nodeW962&quot; aria-labelledby=&quot;nodeW966&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=113.0.5672.127)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03602768&apos;, ip: &apos;10.61.32.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\MustofG\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:53839}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 659beecca3e42c2b8617e5c455c398d8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy20.click(Unknown Source)
+	at com.onbis.Helper.HelperMethods.staleElementClick(HelperMethods.java:343)
+	at com.onbis.Pages.SOIncorporateOntarioBusinessCorporationPage.completeReviewAndAuthorizeAndSubmit(SOIncorporateOntarioBusinessCorporationPage.java:5377)
+	at com.onbis.TestCases.TC04_BCAR005_TestCasesForContinuanceCreate.TC04_BCAR005_TestCasesForContinuanceCreate(TC04_BCAR005_TestCasesForContinuanceCreate.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m17">com.onbis.TestCases.TC28_BCAR003_TestCasesForAmalgamation#TC28_BCAR003_TestCasesForAmalgamation ( TC28_BCAR003_TestCasesForAmalgamation )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">ONBIS Code Version is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:53<br/>Corporation name and number is: 1000630245 ONTARIO CORP. (1000630245) [Ontario Business Corporation]</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span style=&quot;background: lime; border: 3px solid red;&quot;&gt;...&lt;/span&gt; is not clickable at point (94, 594). Other element would receive the click: &lt;div class=&quot;appWizardButtonPad appButtonPad brAmalgamateLocalCompanies-asyncContainer-wizardButtonPad appButtonPad appNotReadOnly appIndex1 appChildCount4&quot; id=&quot;nodeW976&quot; aria-labelledby=&quot;nodeW979&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=113.0.5672.127)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ON34C03602768&apos;, ip: &apos;10.61.32.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\MustofG\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56525}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 897a6cae23e17b54e91fde07313fd7da
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy20.click(Unknown Source)
+	at com.onbis.Helper.HelperMethods.staleElementClick(HelperMethods.java:343)
+	at com.onbis.Pages.SOIncorporateOntarioBusinessCorporationPage.completeReviewAndAuthorizeAndSubmit(SOIncorporateOntarioBusinessCorporationPage.java:5377)
+	at com.onbis.TestCases.TC28_BCAR003_TestCasesForAmalgamation.TC28_BCAR003_TestCasesForAmalgamation(TC28_BCAR003_TestCasesForAmalgamation.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m18">com.onbis.TestCases.TC01_BCAR001_TestCasesForIncorportatDeleteAProfile#TC01_BCAR001_TestCasesForIncorportatDeleteAProfile ( TC01_BCAR001_TestCasesForIncorportatDeleteAProfile )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">The profile name : &apos;1000597408 ONTARIO CORP.&apos; has been deleted out of 204 profiles</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m19">com.onbis.TestCases.TC01_BCAR001_TestCasesForIncorportatNumber#TC01_BCAR001_TestCasesForIncorportatNumber ( TC01_BCAR001_TestCasesForIncorportatNumber )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">ONBIS Code Version is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:53<br/>Corporation name and number is: 1000630238 ONTARIO CORP. (1000630238) [Ontario Business Corporation]<br/>-------: &apos;Email was successfully verified! Transaction Number on email is:--&gt; : 43057201&apos; :-------</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m20">com.onbis.TestCases.TC02_BCAR001_TestCasesForIncorportateName#TC02_BCAR001_TestCasesForIncorportateName ( TC02_BCAR001_TestCasesForIncorportateName )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">ONBIS Code Version is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:53<br/>Corporation name and number is: AXG3S9H9XA7W4WUMX2183 TEST INC. (1000630239) [Ontario Business Corporation]</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m21">com.onbis.TestCases.TC05_NFPCR001_IncorporateANotForProfitCorporation#TC05_NFPCR001_IncorporateANotForProfitCorporation ( TC05_NFPCR001_IncorporateANotForProfitCorporation )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">ONBIS Code Version is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:53<br/>Corporation name and number is: 6P7IVN4MB1VA86ER81673 TEST INC. (1000630241) [Not-for-Profit Corporation]<br/>Transaction number is: 43057222</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m22">com.onbis.TestCases.TC06_EPCR001_ApplicationForEPLicenceForeignCorpWithShare#TC06_EPCR001_ApplicationForEPLicenceForeignCorpWithShare ( TC06_EPCR001_ApplicationForEPLicenceForeignCorpWithShare )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">corporation name and number is: Your submission for B6CRYFZWS2BSDNP4S7677 TEST INC. (1000630242) has been sent to internal staff for review. Please check your work in progress items for updates.<br/>corporation name and number is: Application for Extra-Provincial Licence for Foreign Corporation with Share - 43057223</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m23">com.onbis.TestCases.TC26_BCAM004_TestCasesRestateArticlesOfIncorporation#TC26_BCAM004_TestCasesRestateArticlesOfIncorporation ( TC26_BCAM004_TestCasesRestateArticlesOfIncorporation )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">ONBIS Code Version is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:53<br/>Corporation name and number is: 1000630243 ONTARIO CORP. (1000630243) [Ontario Business Corporation]<br/>Transaction Number is :43057224</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m24">com.onbis.TestCases.TC27_BCAM009_TestCasesFileArticlesOfReorganization#TC27_BCAM009_TestCasesFileArticlesOfReorganization ( TC27_BCAM009_TestCasesFileArticlesOfReorganization )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">ONBIS Code Version is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:53<br/>Corporation name and number is: 1000630244 ONTARIO CORP. (1000630244) [Ontario Business Corporation]<br/>corporation name and number is: Your submission for 1000630244 ONTARIO CORP. (1000630244) has been sent to internal staff for review. Please check your work in progress items for updates.<br/>corporation name and number is: File Articles of Reorganization - 43057226</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h2>Onbis-Sanity-SOAdmin-Chrome</h2><h3 id="m25">com.onbis.TestCases.TC03_OCR001_AssignAnOCN#TC03_OCR001_AssignAnOCN ( TC03_OCR001_AssignAnOCN )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Admin Portal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52<br/>OCN name and number is: Assign an Ontario Corporation Number BYGAER9ADAU9PNYSA TEST INC. (1000605832)</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m26">com.onbis.TestCases.TC06_07_08_CIA004_CIA005_InitialReturnForForeignCor_AnnualReturnForeignCorpWithShare#TC06_07_08_CIA004_CIA005_InitialReturnForForeignCor_AnnualReturnForeignCorpWithShare ( TC06_07_08_CIA004_CIA005_InitialReturnForForeignCor_AnnualReturnForeignCorpWithShare )</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>chrome</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">Admin Portal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52<br/>Transaction Number is: APP-A10235516825<br/>Particulars of EPCA - Extra-Provincial Foreign Licence is: 318H3XKF6ZTNG1XFN7129 TEST INC. (1000605834)</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m27">com.onbis.TestCases.TC09_10_CIA001_CIA003_InitialReturnForONCorp_NoticeOfChangeForAnOntarioCorporation#TC09_10_CIA001_CIA003_InitialReturnForONCorp_NoticeOfChangeForAnOntarioCorporation ( TC09_10_CIA001_CIA003_InitialReturnForONCorp_NoticeOfChangeForAnOntarioCorporation )</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Admin Portal build number is: 2.1.4.2 :: 2.1.4.2 :: 2024/01/18 15:52<br/>Particulars of BCA - Articles of Incorporation is :1000605833 ONTARIO CORP. (1000605833)<br/>Transaction Number is :APP-A10235516437</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h2>Onbis-Regression-Partner Portal</h2><h2>Onbis-Regression-Admin Portal</h2><h2>Onbis-Regression-SOAB Portal</h2><h2>Onbis-Regression-Partner Portal-Data Creation for Renewal</h2><h2>Onbis-Regression-Partner Portal- Renewal</h2><h2>Onbis-CR Regression Test - November 2022 Release</h2><h2>Onbis-CR Regression Test - February 2023 Release</h2></body></html>

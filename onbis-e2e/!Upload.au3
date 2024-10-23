@@ -1,0 +1,7 @@
+Sleep(7000)
+ControlFocus("Open","","Edit1")
+ControlSetText("Open","","Edit1","C:\workspace\onbis-e2e\src\main\resources\123_pdf-file.pdf")
+;ControlSetText("Open","","Edit1",@WorkingDir & "\src\main\resources\123_pdf-file.pdf")
+Sleep(1000)
+ControlClick("Open","","Button1")
+Sleep(10000)
