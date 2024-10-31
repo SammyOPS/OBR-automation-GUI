@@ -126,7 +126,7 @@ public class RegressionTests {
     }
 
     public static void runPartnerPortalDataCreationTests() {
-        // Implement "Data Creation for Renewal" test group
+        // pending
     }
 
     public static void runPartnerPortalRenewalTests() {

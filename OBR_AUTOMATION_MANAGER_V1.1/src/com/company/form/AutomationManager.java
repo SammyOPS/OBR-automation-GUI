@@ -31,11 +31,11 @@ public class AutomationManager {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 600);  // Set the size of the window
 
-        // Set custom icon
+        // Set icon
         ImageIcon img = new ImageIcon(getClass().getClassLoader().getResource("com/company/resources/images/SAM-logo-larger.ico"));
         frame.setIconImage(img.getImage());
 
-        // Set layout manager
+        // layout manager
         frame.setLayout(new BorderLayout());
 
         // Add a banner
@@ -63,9 +63,10 @@ public class AutomationManager {
         gbc.anchor = GridBagConstraints.CENTER;
         formPanel.add(titleLabel, gbc);
 
-        // Get machine and user information
+        // machine and user information
         String userName = System.getProperty("user.name");
         String osName = System.getProperty("os.name");
+            //This ideally is used to display the current user and machine number inwhich the automation is being run at
 
         // Add machine label
         JLabel machineLabel = new JLabel("Automation running on machine: " + userName + " (" + osName + ")");
